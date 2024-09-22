@@ -1,0 +1,30 @@
+#include <iostream>
+#include <vector>
+#include <string>
+
+using namespace std;
+
+int main() {
+    vector<string> todoList;
+    string task;
+
+    cout << "Welcome to the To-Do List!\n";
+
+    while (true) {
+        cout << "Enter a task (or type 'quit' to exit): ";
+        getline(cin, task);
+
+        if (task == "quit") {
+            break;
+        }
+
+        todoList.push_back(task);
+    }
+
+    cout << "\nYour To-Do List:\n";
+    for (size_t i = 0; i < todoList.size(); ++i) {
+        cout << i+1 << ". " << todoList[i] << endl;
+    }
+
+    return 0;
+}
